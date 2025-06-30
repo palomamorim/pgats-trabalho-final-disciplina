@@ -4,10 +4,10 @@
   "type": "module",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha testes",
-    "test:report": "mocha testes --reporter mochawesome --reporter-options reportDir=reports/mochawesome,reportFilename=report"
-  },
+ "scripts": {
+  "test": "mocha 'testes/**/*.js'",
+  "test:report": "mocha 'testes/**/*.js' --reporter mochawesome --reporter-options reportDir=reports/mochawesome,reportFilename=report --exit"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/palomamorim/pgats-trabalho-final-disciplina.git"
