@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha testes",
+    "test:report": "mocha testes --reporter mochawesome --reporter-options reportDir=reports/mochawesome,reportFilename=report"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/palomamorim/pgats-trabalho-final-disciplina#readme",
   "devDependencies": {
-    "mocha": "^11.7.0"
+    "mocha": "^11.7.1",
+    "mochawesome": "^7.1.3"
   }
 }

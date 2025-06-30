@@ -20,4 +20,10 @@ jobs:
 
     # executando testes e2e
       - name: Executando testes com mocha
-        run: npx mocha testes
+        run: npm run test:report
+
+      - name: Upload relatório gerado em mochawesome
+        uses: actions/upload-artifact@
+        with:
+          name: mochawesome-report
+          path: reports/mochawesome
