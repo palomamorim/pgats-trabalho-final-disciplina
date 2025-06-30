@@ -21,6 +21,9 @@ jobs:
     # executando testes e2e
       - name: Executando testes com mocha
         run: npm run test:report
+        
+      - name: Verificar se o relatório é gerado
+        run: ls -R reports || echo "Relatório não encontrado"
 
       - name: Upload relatório gerado em mochawesome
         uses: actions/upload-artifact@v4
