@@ -1,0 +1,23 @@
+# Nível 1 - Disparo manual
+
+name: 'Execução Manual'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  e2e-tests:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
+
+      - name: Instalando dependências com npm
+        run: npm install
+
+    # executando testes e2e
+      - name: Executando testes com mocha
+        run: npx mocha testes
