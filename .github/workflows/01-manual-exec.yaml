@@ -23,7 +23,7 @@ jobs:
         run: npm run test:report
 
       - name: Upload relatório gerado em mochawesome
-        uses: actions/upload-artifact@4
+        uses: actions/upload-artifact@v4
         with:
           name: mochawesome-report
           path: reports/mochawesome
